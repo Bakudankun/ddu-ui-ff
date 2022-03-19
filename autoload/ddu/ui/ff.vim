@@ -65,6 +65,9 @@ function! ddu#ui#ff#_update_buffer(
   if !has('nvim')
     " Note: :redraw is needed for Vim
     redraw
+    if getcmdline() !=# ''
+      echo getcmdline()
+    endif
   endif
 endfunction
 
